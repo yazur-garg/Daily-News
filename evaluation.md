@@ -1,4 +1,4 @@
-# Task 1
+# Task 2 (17.5/30)
 
 ## Project Descrition
 Appropriate work. Some fields may be missing. The project description is mostly clear and most of the required tools are present. More tools, specially the one pertaining user saving preferences are missing. (5/7.5)
