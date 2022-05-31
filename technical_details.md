@@ -11,3 +11,7 @@ No other JavaScript libraries are used.
 
 This website will be developed using [Visual Studio Code](https://code.visualstudio.com/) with a Remote-SSH extension.
 [Postman](https://www.postman.com/) is used to test HTTP requests in order to decouple back-end and front-end tasks.
+  
+## Authorization
+
+For the purposes of authorization and authentication a third party commentcial service, [auth0](https://auth0.com/) has been used.
