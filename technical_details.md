@@ -14,4 +14,4 @@ This website will be developed using [Visual Studio Code](https://code.visualstu
   
 ## Authorization
 
-For the purposes of authorization and authentication a third party commentcial service, [auth0](https://auth0.com/) has been used.
+For the purposes of authorization and authentication a third party commercial service, [auth0](https://auth0.com/) has been used.
