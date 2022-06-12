@@ -4,7 +4,7 @@
 An active user of the web application, with a valid account.
 
 ### Pre-conditions
-User must have an account.
+User must have an account. 
 User must already be logged into the system.
 
 ### Main Flow
@@ -21,7 +21,6 @@ User must already be logged into the system.
 
 ### Alternate Flows
 - If the active user chooses to add another category instead of saving the changes after adding one:
-
 
 ### Main Flow
 
