@@ -20,5 +20,5 @@ User must be logged into the system and user credentials have been verified.
   1. The system will display the specific Error message and redirect the user to a search route.
  
 ### Postconditions
-- A user will have the weather forecast for his desired location.
-- A new searched location is saved into the history list and the database is updated.  
+- Theuser will have the weather forecast for their desired location.
+- The new search query is saved in the search history and the database is updated.  
