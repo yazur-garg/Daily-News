@@ -18,4 +18,10 @@ Missing items and/or confusion of the roles of different technologies. There sho
 - **User search for Weather data (By Anshul Gandhi)** - The Actor field should only explain who the actor is. Main flow does not mention API. Steps 2 and 3 are out of synch. I belive that the idea was to let users either select a previously favorited location, or choose a new one. However, this is not clear from the flow. Multiple typos. 4/10
 - **User creates an account ( By Divnoor Bhandohal)** - More alternate flows should have been considered. For example, if the user cancels the actions prior to the end. 8/10
 
+### Milestones (3/5)
+- Item 5 should be broken down into back end and hosting
+- Item 6 should be removed (it is part of each step)
+- Item 11 should porbably discuss the design of the "pushing the application to the host"
 
+### Deliverables (5/5)
+- Great!!! No changes requested
