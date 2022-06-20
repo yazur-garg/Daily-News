@@ -36,3 +36,27 @@ Our group is planning to develop a website which aggregates news and weather dat
 6. News and location preferences customization tool accessible for users.
 7. Routes for all users accessible.
 9. Application is accessible globaly.
+
+## 5. Risks, Assumptions, and Constraints
+
+### 5.1 Risks
+
+- The hosting service ([Heroku](https://www.heroku.com/)) has an outage causing the web application to not be avalible.
+- The authentication service ([auth0](https://auth0.com/)) has an outage causing the user to unable to acces there accounts.
+- The APIs used may have the outage causing the web application to be unable to fetch weather or news data.
+- New user may have the difficulty to navigate the web application.
+- Stakeholders may leave the project before its successful completion.
+
+### 5.2 Assumptions
+
+- The utilised services for hosing and authentication are extremely relible. (accessible for more than 99.9% of the time)
+- The application is scalable. 
+- Everything will go as planned; all the key milestones and deliverables are on considerable time.
+- All the stakeholders will work in a harmony.
+
+### 5.3 Constraints
+
+- User location data will only be saved if it is permited by the user.
+- The work in the web application needs to be completed before the assigned deadline.
+- A required API [NEWS Api](https://newsapi.org/) has an allowable limit of only 100 requests/day and [OpenWeather Api](https://openweathermap.org/) has the limit of 60 calls/min.
+- The authentication service ([auth0](https://auth0.com/)) has an limit of 7000 active users.
