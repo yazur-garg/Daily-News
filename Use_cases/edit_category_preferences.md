@@ -21,16 +21,6 @@ User must already be logged into the system.
 
 ### Alternate Flows
 - If the active user chooses to add another category instead of saving the changes after adding one:
-
-### Main Flow
-
-1. User click on **Weather Forecast** button in navigation bar.  
-2. The system displays a list of saved locations from the database.
-3. User can search for weather forcast for new location.
-4. The system will show the current weather data for selected location.
-
-### Alternate Flows
-- If the active user searched for incorrect demographic location:
   1. The system will display the drop-down menu as in Step 6 and execution will continue from there. Steps 6 to 8 will be repeated until the user clicks the **Save** button as described in Step 9.
 - If the active user clicked the **Don't Save** button:
   1. The system will discard the changes made to the user's preferences and display the settings page as it was before any changes were made.
