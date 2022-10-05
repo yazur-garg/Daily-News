@@ -90,3 +90,4 @@ BTS530 NAA Team #10
 | Team Member | Date Signed |
 |-------------------------|----------------|
 | Arryell Parris | Oct 05 2022 |
+| Anshul Gandhi | Oct 05 2022 |
