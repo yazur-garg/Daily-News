@@ -89,4 +89,4 @@ BTS530 NAA Team #10
 ### Signatures:
 | Team Member | Date Signed |
 |-------------------------|----------------|
-| Arreyell Parris | Oct 05 2022 |
+| Arryell Parris | Oct 05 2022 |
