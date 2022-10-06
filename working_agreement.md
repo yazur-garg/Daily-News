@@ -92,3 +92,4 @@ BTS530 NAA Team #10
 | Arryell Parris | Oct 05 2022 |
 | Anshul Gandhi | Oct 05 2022 |
 | Yazur Garg| Oct 05 2022|
+| Divnoor Singh Bhandohal | Oct 05 2022|
