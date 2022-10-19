@@ -15,18 +15,19 @@ BTS530 NAA Team #10
     -	We will use Discord to have the meetings.
 
 2. Preferred method of communication:  
-    -	Email
     -	Discord
-    -	MS Teams
 
-3. Decision-making policy: 
+3. The responsiveness of the team members:
+    - The team members shoul reply to other team members with in 24hrs.
+
+4. Decision-making policy: 
     -	We will make decisions based on consensus and constructive discussions.
 
-4. Conflict resolution
+5. Conflict resolution
     - Conflicts will be resolved through  constructive discussion involving all members of the group.
     - After discussion, we will make a decision based on group consensus.
 
-5. Procedure for submitting changes to the project
+6. Procedure for submitting changes to the project
     - Any potential changes must be made in a branch separate from the main branch.
     - Any changes made to resolve a particular issue should be addressed in a branch named for that issue.
     - Team members must submit pull requests via GitHub Actions when they wish to publish their changes to the main branch.
@@ -49,6 +50,21 @@ BTS530 NAA Team #10
     -	Set internal deadlines prior to the official deadline so that the project can be completed on-time.
     -	If anyone cannot complete their parts, they should tell the group beforehand. So that, others will help them to solve the problem and meet the deadline on-time.
 
+3. The coding style and pattern:
+    - Use meaningful variable names:
+        - don't use single letter variable names except for something like a loop counter.
+        - don't use the variable name flag. This is as meaningless as x. especially bad if you have flag1, flag2, etc.
+    - Use Camel case for variable and function names(lower case first letter, and lower case in general, upper case first letter of each word other than first).
+    - For curly braces place the brace in a new line.
+        ```c++
+        for(...)
+        {
+            ...
+        }
+        ```
+    - Use proper indentation for each block of code, so that the code is easily readable.
+    - Declare each variable in a new line.
+   
 ### Team Participation
 
 1.	Strategies to ensure cooperation and equal distribution of tasks:
