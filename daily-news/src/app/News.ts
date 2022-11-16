@@ -1,6 +1,6 @@
 export class News{
     source: {
-        id: string;
+        id: any;
         name: string;
     }
     author: string;

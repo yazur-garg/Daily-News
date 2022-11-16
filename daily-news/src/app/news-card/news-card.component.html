@@ -1,4 +1,4 @@
-<div class="post-thumbnail"><img src={{inputnews.urlToImage}} alt="..." class="img-fluid"></div>
+<!-- <div class="post-thumbnail"><img src={{inputnews.urlToImage}} alt="..." class="img-fluid"></div>
 <div class="post-details">
     <div class="post-meta d-flex justify-content-between">
         <div class="date meta-last">{{inputnews.publishedAt | date:'mediumDate'}}</div>
@@ -10,4 +10,16 @@
         <div class="title"><span>{{inputnews.author}}</span></div></a>
         <div class="date"><i class="icon-clock"></i>{{inputnews.publishedAt | date:'mediumDate'}}</div>
     </footer>
+</div> -->
+
+<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+    <div class="col p-4 d-flex flex-column position-static">
+    <h3 class="mb-0">{{inputnews.title}}</h3>
+    <div class="mb-1 text-muted">{{inputnews.publishedAt | date:'mediumDate'}}</div>
+    <p class="card-text mb-auto">{{inputnews.content}}</p>
+    <a href="{{inputnews.url}}" class="stretched-link">Continue reading</a>
+    </div>
+    <div class="col-auto d-none d-lg-block">
+    <div class="post-thumbnail" style="padding-bottom: 15px;"><img src={{inputnews.urlToImage}} alt="..." class="img-fluid"></div>
+    </div>
 </div>
