@@ -1,0 +1,13 @@
+<div class="post-thumbnail"><img src={{inputnews.urlToImage}} alt="..." class="img-fluid"></div>
+<div class="post-details">
+    <div class="post-meta d-flex justify-content-between">
+        <div class="date meta-last">{{inputnews.publishedAt | date:'mediumDate'}}</div>
+    </div><a href="{{inputnews.url}}">
+        <h3 class="h4">{{inputnews.title}}</h3></a>
+    <div class="text-muted" innerHTML = {{inputnews.content}}></div>
+    <footer class="post-footer d-flex align-items-center"><a routerLink="#" class="author d-flex align-items-center flex-wrap">
+        <div class="avatar"><img src="/assets/img/user.svg" alt="..." class="img-fluid"></div>
+        <div class="title"><span>{{inputnews.author}}</span></div></a>
+        <div class="date"><i class="icon-clock"></i>{{inputnews.publishedAt | date:'mediumDate'}}</div>
+    </footer>
+</div>
