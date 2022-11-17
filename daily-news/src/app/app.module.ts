@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AuthModule } from '@auth0/auth0-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -34,7 +35,11 @@ import { UserSidebarComponent } from './user-sidebar/user-sidebar.component';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AuthModule.forRoot({
+      domain: 'dev-qlaqth2maxgklzeb.us.auth0.com',
+      clientId: 'LA10lce6tjmCYhAOgl5efiIPnmKOe4GZ'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
