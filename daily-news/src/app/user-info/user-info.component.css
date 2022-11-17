@@ -1,0 +1,15 @@
+.user-info>* {
+    margin: 6px;
+}
+
+.user-info>div {
+    padding: 3px;
+}
+
+.preferences>* {
+    margin: 1em;
+}
+
+.list {
+    margin-left: 2em;
+}

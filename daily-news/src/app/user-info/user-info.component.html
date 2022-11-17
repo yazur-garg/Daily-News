@@ -1,0 +1,22 @@
+<div class="user-profile">
+    <div class="user-info">
+        <h2 id="user-name">{{inputUser.name}}</h2>
+        <div>Email: <b>{{inputUser.email}}</b></div>
+        <div>Phone: <b>{{inputUser.phone}}</b></div>
+    </div>
+    <div class="preferences">
+        <div class="locations">
+            <h5>Locations</h5>
+            <ul class="list">
+                <li *ngFor="let location of inputUser.prefs.locs">{{location}}</li>
+            </ul>
+        </div>
+        <div class="categories">
+            <h5>Categories</h5>
+            <ul class="list">
+                <li *ngFor="let category of inputUser.prefs.categs">{{category}}</li>
+            </ul>
+        </div>
+        <button id="edit-preferences" class="btn btn-primary">Edit Preferences</button>
+    </div>
+</div>

@@ -12,6 +12,9 @@ import { NewsCardComponent } from './news-card/news-card.component';
 import { PagingComponent } from './paging/paging.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { UserProfileComponent } from './user-profile/user-profile.component';
+import { UserInfoComponent } from './user-info/user-info.component';
+import { UserSidebarComponent } from './user-sidebar/user-sidebar.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { FormsModule } from '@angular/forms';
     HomeComponent,
     PageNotFoundComponent,
     NewsCardComponent,
-    PagingComponent
+    PagingComponent,
+    UserProfileComponent,
+    UserInfoComponent,
+    UserSidebarComponent
   ],
   imports: [
     BrowserModule,
