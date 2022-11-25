@@ -1,5 +1,5 @@
-## Deployment (0/15)
-- If done by the 25th, up to full marks.
+## Deployment (15/15)
+- If done by the 25th, up to full marks. Done!
  
 ## Sprint 1 
 
