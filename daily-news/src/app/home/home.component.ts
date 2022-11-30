@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   page: number = 1;
   pagesize: number = 9;
 
-  ngOnInit(): void {
+  ngOnInit(): void { 
     this.newsService.getNews().subscribe(
       data => {this.allNews = data.articles; this.getPage(1);console.log(this.allNews)}
     , err => {console.log('Error: ' + err)});
