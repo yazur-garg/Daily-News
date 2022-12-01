@@ -7,7 +7,7 @@ This project aims to create a web application allows a user to search for and vi
 The technologies we are planing to use for the web application are angular, mongo DB, bootstrap and multipal APIs.
 
 ### List of the APIs 
-- [NEWS Api](https://newsapi.org/) to get the news data for the user.
+- [NY Times Api](https://developer.nytimes.com/) to get the news data for the user.
 - [OpenWeather Api](https://openweathermap.org/) to get the weather data.
 
 ----
