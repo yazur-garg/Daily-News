@@ -19,5 +19,5 @@ This website will be developed using [Visual Studio Code](https://code.visualstu
 For the purposes of authorization and authentication a third party commercial service, [auth0](https://auth0.com/) has been used.
 
 ## List of the APIs 
-- [NEWS Api](https://newsapi.org/) to get the news data for the user.
+- [NY Times Api](https://developer.nytimes.com/) to get the news data for the user.
 - [OpenWeather Api](https://openweathermap.org/) to get the weather data.
