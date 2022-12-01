@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void { 
     this.newsService.getNews().subscribe(
-      data => {this.allNews = data.articles; this.getPage(1);console.log(this.allNews)}
+      data => {this.allNews = data.results; this.getPage(1);console.log(this.allNews)}
     , err => {console.log('Error: ' + err)});
   }
 
