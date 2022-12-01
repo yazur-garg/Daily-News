@@ -1,8 +1,33 @@
+<h1 class="col-md text-center text-md-left"> Welcome </h1>
+
+<br>
+
 <!-- menu tab on left side; profile info (or menu operations) in center -->
-<div class="container">
-    <div class="row">
-        <app-user-sidebar class="post col-xl-4"></app-user-sidebar>
-        <app-user-info class="post col-xl-4" [user]="staticUser"></app-user-info>
+<div class="row">
+
+    <app-user-sidebar class="post col-xl-4">
+    </app-user-sidebar>
+
+
+    <div class="pfp" *ngIf="auth.user$ | async as user">
+        <div class="row align-items-center profile-header">
+            <div class="col-md-2 mb-3">
+                <img [src]="user.picture" alt="users picture" class="rounded-circle img-fluid profile-picture">
+
+            </div>
+            <div class="col-md text-center text-md-left">
+                <h3>{{user.name}}</h3>
+                <p class="lead text muted">{{user.email}}</p>
+            </div>
+        </div>
     </div>
+
+
 </div>
-  
+
+
+
+<div class="row">
+    <!-- <app-user-sidebar class="post col-xl-4"></app-user-sidebar> -->
+
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 import { User } from '../User';
 
 @Component({
@@ -7,8 +8,8 @@ import { User } from '../User';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-
-  constructor() { }
+  profileJson : string = "";
+  constructor(public auth : AuthService) { }
   staticUser: User = {
     id: 1,
     name: "Bobby",
@@ -22,6 +23,9 @@ export class UserProfileComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    this.auth.user$.subscribe(
+      (profile)=>(this.profileJson = JSON.stringify(profile,null,2)) 
+    )
   }
 
 }
