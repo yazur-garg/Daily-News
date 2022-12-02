@@ -15,4 +15,11 @@ export class NewsService {
                      console.log('Handling error locally and rethrowing it...',err);
                      return throwError(err)}));
   }
+
+  getNewsCateg(category : String): Observable<any> {
+    return this.http.get<any>(`https://api.nytimes.com/svc/topstories/v2/${category}.json?api-key=R2UmguMeKyLd7e0h48xvNaEn6f1k74n6`)
+                  .pipe(catchError(err => {
+                     console.log('Handling error locally and rethrowing it...',err);
+                     return throwError(err)}));
+  }
 }
