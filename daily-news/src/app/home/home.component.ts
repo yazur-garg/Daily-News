@@ -26,7 +26,11 @@ export class HomeComponent implements OnInit {
    });
 
     this.newsService.getNewsCateg(this.categoryParam).subscribe(
-      data => {this.allNews = data.results; this.getPage(1);console.log(this.allNews);}
+      data => {this.allNews = data.results;
+        this.allNews = this.allNews.filter((news) => news.title != "");
+        this.getPage(1);
+        console.log(this.allNews); 
+      }
     , err => {console.log('Error: ' + err)});
   }
 
