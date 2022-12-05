@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { async } from '@angular/core/testing';
 import { AuthService } from '@auth0/auth0-angular';
 import { User } from '../User';
 
@@ -8,12 +9,22 @@ import { User } from '../User';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-  profileJson : string = "";
-  constructor(public auth : AuthService) { }
+  profileJson : string = ''
+  json : JSON 
+  email : string | undefined  =""
+  userName : string | undefined  =""
+  data : any
+  constructor(public auth : AuthService) {
+ 
+    
+
+    
+   }
   staticUser: User = {
     id: 1,
-    name: "Bobby",
-    email: "bob1@outlook.com",
+
+    name: "",
+    email: "",
     password: "abcd",
     phone: 32542661702,
     prefs: {
@@ -23,9 +34,25 @@ export class UserProfileComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    
     this.auth.user$.subscribe(
-      (profile)=>(this.profileJson = JSON.stringify(profile,null,2)) 
-    )
+      (profile)=>
+      {
+
+this.userName = JSON.stringify(profile?.name)
+this.email = JSON.stringify(profile?.email)
+
+  this.staticUser.name = this.userName.split(`"`).join("")
+  this.staticUser.email = this.email
+
+  this.staticUser.email = JSON.stringify(profile?.email)    
+      }
+      )
+   
+      
+    }
+  
+
   }
 
-}
+

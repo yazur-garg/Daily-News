@@ -1,7 +1,7 @@
 export class User{
     id: number;
-    name: string;
-    email: string;
+    name: string | undefined;
+    email: string | undefined;
     password: string;
     phone: number;
     prefs: {
