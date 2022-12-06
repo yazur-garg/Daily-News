@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { News } from '../News';
 import { NewsService } from '../news.service';
+
 
 @Component({
   selector: 'app-home',
@@ -8,15 +10,27 @@ import { NewsService } from '../news.service';
   styleUrls: ['./home.component.css'],
 })
 export class HomeComponent implements OnInit {
-  constructor(private newsService: NewsService) {}
+  constructor(private newsService: NewsService, private router: ActivatedRoute) {}
   allNews: News[] = [];
   newslist: News[] = [];
   page: number = 1;
   pagesize: number = 9;
+  categoryParam: String = "home";
+  querySub: any;
 
   ngOnInit(): void { 
-    this.newsService.getNews().subscribe(
-      data => {this.allNews = data.results; this.getPage(1);console.log(this.allNews)}
+    this.querySub = this.router.params.subscribe(params => {
+      if (params['category']) {
+        this.categoryParam = params['category'];
+      }
+   });
+
+    this.newsService.getNewsCateg(this.categoryParam).subscribe(
+      data => {this.allNews = data.results;
+        this.allNews = this.allNews.filter((news) => news.title != "");
+        this.getPage(1);
+        console.log(this.allNews); 
+      }
     , err => {console.log('Error: ' + err)});
   }
 
