@@ -1,9 +1,8 @@
 export class User{
-    id: number;
+    id: string | undefined;
     name: string | undefined;
     email: string | undefined;
-    password: string;
-    phone: number;
+    img: string | undefined;
     prefs: {
         locs: Array<string>;
         categs: Array<string>;

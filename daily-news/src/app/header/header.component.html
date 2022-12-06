@@ -18,17 +18,10 @@
             <path d="M21 21l-5.2-5.2" />
           </svg>
         </a>
-
         <app-login *ngIf="(auth.isAuthenticated$ | async) === false"></app-login>
-        <a *ngIf="(auth.isAuthenticated$ | async) === true" href="users/1"><img href="users/1"
+        <a *ngIf="(auth.isAuthenticated$ | async) === true" href="profile"><img href="profile"
             *ngIf="auth.user$ | async as user" [src]="user.picture" alt="users picture"
             class="rounded-circle shadow-4-strong" style="max-height: 40px; max-width: 40px;"></a>
-
-
-
-        <!-- <app-login *ngIf="(auth.isAuthenticated$ | async) === true"></app-login> -->
-        <!-- <a *ngIf="(auth.isAuthenticated$ | async) === false" class="btn btn-sm btn-outline-secondary"
-          href="login">Login</a> -->
       </div>
     </div>
   </header>

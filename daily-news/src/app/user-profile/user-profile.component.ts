@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { async } from '@angular/core/testing';
 import { AuthService } from '@auth0/auth0-angular';
 import { User } from '../User';
 
@@ -9,24 +8,12 @@ import { User } from '../User';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-  profileJson : string = ''
-  json : JSON 
-  email : string | undefined  =""
-  userName : string | undefined  =""
-  data : any
-  constructor(public auth : AuthService) {
- 
-    
-
-    
-   }
-  staticUser: User = {
-    id: 1,
-
+  constructor(public auth : AuthService) {}
+  user_: User = {
+    id: "",
     name: "",
     email: "",
-    password: "abcd",
-    phone: 32542661702,
+    img: "",
     prefs: {
         locs: ["Milwaukee,US","London,GB","Paris,FR"],
         categs: ["Technology","Culture","Business","Style"]
@@ -34,25 +21,16 @@ export class UserProfileComponent implements OnInit {
   };
 
   ngOnInit(): void {
-    
     this.auth.user$.subscribe(
-      (profile)=>
-      {
-
-this.userName = JSON.stringify(profile?.name)
-this.email = JSON.stringify(profile?.email)
-
-  this.staticUser.name = this.userName.split(`"`).join("")
-  this.staticUser.email = this.email
-
-  this.staticUser.email = JSON.stringify(profile?.email)    
-      }
-      )
-   
-      
-    }
-  
-
+      (profile)=> 
+        {
+          this.user_.id = profile?.sub;
+          this.user_.name = profile?.name;
+          this.user_.img = profile?.picture;
+          this.user_.email = profile?.email;
+        }
+    ) 
   }
+}
 
 

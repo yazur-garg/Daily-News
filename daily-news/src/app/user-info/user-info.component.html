@@ -1,8 +1,8 @@
 <div class="user-profile">
     <div class="user-info">
+        <img [src]="inputUser.img" alt="users picture" class="rounded-circle img-fluid profile-picture">
         <h2 id="user-name">{{inputUser.name}}</h2>
         <div>Email: <b>{{inputUser.email}}</b></div>
-        <div>Phone: <b>{{inputUser.phone}}</b></div>
     </div>
     <div class="preferences">
         <div class="locations">
@@ -17,6 +17,5 @@
                 <li *ngFor="let category of inputUser.prefs.categs">{{category}}</li>
             </ul>
         </div>
-        <button id="edit-preferences" class="btn btn-primary">Edit Preferences</button>
     </div>
 </div>
