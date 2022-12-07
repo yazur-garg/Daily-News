@@ -8,9 +8,15 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 export class HeaderComponent implements OnInit {
 
+  profileJson: string = "";
+
   constructor(public auth: AuthService) { }
 
   ngOnInit(): void {
+
+    this.auth.user$.subscribe(
+      (profile) => (this.profileJson = JSON.stringify(profile, null, 2)),
+    );
   }
 
   formSubmit() {
