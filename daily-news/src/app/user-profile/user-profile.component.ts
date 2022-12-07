@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 import { User } from '../User';
 
 @Component({
@@ -7,14 +8,12 @@ import { User } from '../User';
   styleUrls: ['./user-profile.component.css']
 })
 export class UserProfileComponent implements OnInit {
-
-  constructor() { }
-  staticUser: User = {
-    id: 1,
-    name: "Bobby",
-    email: "bob1@outlook.com",
-    password: "abcd",
-    phone: 32542661702,
+  constructor(public auth : AuthService) {}
+  user_: User = {
+    id: "",
+    name: "",
+    email: "",
+    img: "",
     prefs: {
         locs: ["Milwaukee,US","London,GB","Paris,FR"],
         categs: ["Technology","Culture","Business","Style"]
@@ -22,6 +21,16 @@ export class UserProfileComponent implements OnInit {
   };
 
   ngOnInit(): void {
+    this.auth.user$.subscribe(
+      (profile)=> 
+        {
+          this.user_.id = profile?.sub;
+          this.user_.name = profile?.name;
+          this.user_.img = profile?.picture;
+          this.user_.email = profile?.email;
+        }
+    ) 
   }
-
 }
+
+
