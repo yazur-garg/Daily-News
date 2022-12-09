@@ -9,3 +9,13 @@ Most items succesfully implemented. Only missing deployment to Netlify.
 ### Documentation (10/10)
 - Code merged via PRs.
 - The issues that were created were well documented.
+
+
+## Sprint 2 
+
+### Implementation (20/20)
+All items succesfully implemented.
+
+### Documentation (10/10)
+- Code merged via PRs.
+- The issues that were created were well documented.
