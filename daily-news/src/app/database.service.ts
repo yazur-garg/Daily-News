@@ -23,4 +23,7 @@ export class DatabaseService {
   newUser(data: User): Observable<any> {
     return this.http.post<any>(this.url + '/api/users', data);
   }
+  updateUser(id: any, data: User): Observable<any> {
+    return this.http.put<any>(this.url + '/api/users/' + id, data);
+  }
 }
