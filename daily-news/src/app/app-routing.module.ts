@@ -10,6 +10,7 @@ const routes: Routes = [
   { path:'login' , component: LoginComponent },
   { path:'profile', component: UserProfileComponent },
   { path:'home/:category' , component: HomeComponent },
+  { path:'search/:topic' , component: HomeComponent },
   { path:'' , redirectTo: '/home', pathMatch: 'full' },
   { path:'**' , component: PageNotFoundComponent }
 ];
