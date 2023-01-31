@@ -16,7 +16,6 @@ export class HomeComponent implements OnInit {
   page: number = 1;
   pagesize: number = 9;
   categoryParam: String = "home";
-  topicParam: String = "";
   querySub: any;
 
   ngOnInit(): void { 
@@ -24,35 +23,15 @@ export class HomeComponent implements OnInit {
       if (params['category']) {
         this.categoryParam = params['category'];
       }
-
-      if (params['topic']) {
-        this.topicParam = params['topic'];
-      }
    });
 
-    if (this.topicParam) {
-      this.newsService.getNewsTopic(this.topicParam).subscribe(
-        data => {this.allNews = data.response.docs;
-          console.log("this.topicParam = ", this.topicParam);
-          console.log("data = ", data);
-          //console.log("data.response.docs[0].headline.main = ", data.response.docs[0].headline.main);
-          console.log("this.allNews = ", this.allNews);
-
-          //this.allNews = this.allNews.filter((news) => news.headline.main != "");
-          this.getPage(1);
-          //console.log(this.allNews); 
-        }
-        , err => {console.log('Error: ' + err)});
+    this.newsService.getNewsCateg(this.categoryParam).subscribe(
+      data => {this.allNews = data.results;
+        this.allNews = this.allNews.filter((news) => news.title != "");
+        this.getPage(1);
+        console.log(this.allNews); 
       }
-    else {
-      this.newsService.getNewsCateg(this.categoryParam).subscribe(
-        data => {this.allNews = data.results;
-          this.allNews = this.allNews.filter((news) => news.title != "");
-          this.getPage(1);
-          console.log(this.allNews); 
-        }
-      , err => {console.log('Error: ' + err)});
-    }
+    , err => {console.log('Error: ' + err)});
   }
 
   getPage(num: number){
