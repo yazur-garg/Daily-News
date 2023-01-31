@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
   allNews: News[] = [];
   newslist: News[] = [];
   page: number = 1;
-  pagesize: number = 9;
+  pagesize: number = 12;
   categoryParam: String = "home";
   querySub: any;
 

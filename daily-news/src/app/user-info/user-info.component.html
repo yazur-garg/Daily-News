@@ -5,17 +5,20 @@
         <div>Email: <b>{{inputUser.email}}</b></div>
     </div>
     <div class="preferences">
-        <div class="locations">
-            <h5>Locations</h5>
-            <ul class="list">
-                <li *ngFor="let location of inputUser.prefs.locs">{{location}}</li>
-            </ul>
-        </div>
-        <div class="categories">
-            <h5>Categories</h5>
-            <ul class="list">
-                <li *ngFor="let category of inputUser.prefs.categs">{{category}}</li>
-            </ul>
-        </div>
+        <h4>Locations</h4>
+        <ul class="list">
+            <li *ngFor="let location of inputUser.prefs.locs">{{location}}</li>
+        </ul>
+        <h4>Categories</h4>
+        <form  #categorform="ngForm" (ngSubmit)="updateCategories(categorform)">
+            <div class="list categories">
+                <div *ngFor="let category of categories; let i = index">
+                    <input class="form-check-input checkbox" type="checkbox" name = "{{category}}" id="{{category}}" [(ngModel)]="flagCategories[i]">
+                    <label class="form-check-label" for="{{category}}">{{category.charAt(0).toUpperCase() + category.slice(1)}}</label>
+                </div>
+            </div>
+            <p *ngIf="flagMessage" style="font-weight: bold; color: greenyellow;">Categories Updated!</p>
+            <button  type="submit" class="update">Update</button>
+        </form>
     </div>
 </div>

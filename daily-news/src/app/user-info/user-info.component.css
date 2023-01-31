@@ -1,15 +1,34 @@
-.user-info>* {
-    margin: 6px;
+.user-profile {
+    padding: 1.5em 0;
+}
+
+.user-info {
+    text-align: center;
 }
 
 .user-info>div {
     padding: 3px;
 }
 
-.preferences>* {
-    margin: 1em;
+.list {
+    font-size: large;
+    margin-left: 2em;
+    display: grid;
+    grid-template-columns: repeat(5, 8em);
+    gap: 0.5em;
+    padding-bottom: 1em;
 }
 
-.list {
-    margin-left: 2em;
+.checkbox {
+    height: 15px;
+    width: 15px;
+}
+
+.update {
+    font-weight: bold;
+    color: white;
+    border: none;
+    padding: 8px 30px;  
+    border-radius: 8px;
+    background-color: #087cfc;
 }
