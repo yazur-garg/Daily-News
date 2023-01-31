@@ -4,7 +4,7 @@ export class User{
     email: string | undefined;
     img: string | undefined;
     prefs: {
-        locs: Array<string>;
-        categs: Array<string>;
+        locs: string[];
+        categs: string[];
     }
 }

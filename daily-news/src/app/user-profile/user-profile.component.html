@@ -1,7 +1,7 @@
-<div class="container">
-    <div class="row">
-        <app-user-sidebar class="post col-xl-4"></app-user-sidebar>
-        <app-user-info class="post col-xl-4" [user]="user_"></app-user-info>
-    </div>
+<div class="row">
+    <app-user-sidebar class="post col-xl-3"></app-user-sidebar>
+    <span *ngIf="user_.prefs.categs.length == 0" class="loader"></span>
+    <app-user-info *ngIf="user_.prefs.categs.length != 0" class="post col-xl-8" [user]="user_"></app-user-info>
 </div>
+
     

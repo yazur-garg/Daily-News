@@ -1,27 +1,11 @@
-<!-- <div class="post-thumbnail"><img src={{inputnews.urlToImage}} alt="..." class="img-fluid"></div>
-<div class="post-details">
-    <div class="post-meta d-flex justify-content-between">
-        <div class="date meta-last">{{inputnews.publishedAt | date:'mediumDate'}}</div>
-    </div><a href="{{inputnews.url}}">
-        <h3 class="h4">{{inputnews.title}}</h3></a>
-    <div class="text-muted" innerHTML = {{inputnews.description}}></div>
-    <footer class="post-footer d-flex align-items-center"><a routerLink="#" class="author d-flex align-items-center flex-wrap">
-        <div class="avatar"><img src="/assets/img/user.svg" alt="..." class="img-fluid"></div>
-        <div class="title"><span>{{inputnews.author}}</span></div></a>
-        <div class="date"><i class="icon-clock"></i>{{inputnews.publishedAt | date:'mediumDate'}}</div>
-    </footer>
-</div> -->
-
-<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative" style="margin-right: 1px;">
-    <div class="col p-4 d-flex flex-column position-static">
-        <h3 class="mb-0">{{inputnews.title}}</h3>
+<div class="border rounded overflow-hidden mb-3 shadow" style="height: 575px;">
+    <div class="p-3">
+        <h3 style="min-height: 140px;">{{inputnews.title}}</h3>
         <div class="mb-1 text-muted">{{inputnews.published_date | date:'mediumDate'}}
             <span style="font-weight: bold; float:right">{{inputnews.section.toUpperCase()}}</span>
         </div>
-        <p class="card-text mb-auto">{{inputnews.abstract}}</p>
-        <a href="{{inputnews.url}}" class="stretched-link">Continue reading</a> 
+        <p class="mb-auto" style="min-height: 80px;">{{inputnews.abstract}}</p>
+        <a href="{{inputnews.url}}" class="stretched-link" style="margin-top: 5px;"><u>Continue reading</u></a> 
     </div>
-    <div class="col-auto d-none d-lg-block">
-        <div class="post-thumbnail" style="padding-bottom: 15px;"><img src={{inputnews.multimedia[1].url}} alt="" class="img-fluid"></div>
-    </div>
+    <img src={{inputnews.multimedia[1].url}} alt="" class="img-fluid"  style="min-height: 250px; min-width: 225px;">
 </div>

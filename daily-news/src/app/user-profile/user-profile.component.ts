@@ -21,8 +21,8 @@ export class UserProfileComponent implements OnInit {
     email: '',
     img: '',
     prefs: {
-      locs: ['Milwaukee,US', 'London,GB', 'Paris,FR'],
-      categs: ['Technology', 'Culture', 'Business', 'Style'],
+      locs: [],
+      categs: [],
     },
   };
 
