@@ -1,4 +1,5 @@
 export class NewsSearch{
+    abstract: string;
     web_url: string;
     snippet: string;
     print_page: number;
