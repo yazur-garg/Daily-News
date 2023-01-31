@@ -16,6 +16,9 @@ import { FormsModule } from '@angular/forms';
 import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { UserSidebarComponent } from './user-sidebar/user-sidebar.component';
+import { SearchComponent } from './search/search.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
+import { SearchNewsCardComponent } from './search-news-card/search-news-card.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,10 @@ import { UserSidebarComponent } from './user-sidebar/user-sidebar.component';
     PagingComponent,
     UserProfileComponent,
     UserInfoComponent,
-    UserSidebarComponent
+    UserSidebarComponent,
+    SearchComponent,
+    SearchbarComponent,
+    SearchNewsCardComponent
   ],
   imports: [
     BrowserModule,

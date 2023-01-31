@@ -1,0 +1,16 @@
+<div class="border rounded overflow-hidden mb-3 shadow">
+    <div class="p-3">
+        <h3 style="min-height: 140px;">{{inputnews.headline.main}}</h3>
+        <div class="mb-1 text-muted">{{inputnews.pub_date | date:'mediumDate'}}
+            <span style="font-weight: bold; float:right">{{inputnews.section_name.toUpperCase()}}</span>
+        </div>
+        <p class="mb-auto" style="min-height: 80px;">{{inputnews.abstract}}</p>
+        <a href="{{inputnews.web_url}}" class="stretched-link" style="margin-top: 5px;"><u>Continue reading</u></a> 
+    </div>
+    <img *ngIf="inputnews.multimedia.length > 42; else noimg" src="https://static01.nyt.com/{{inputnews.multimedia[43].url}}" alt="No Image Available" class="img-fluid"  style="min-height: 250px; min-width: 225px;">
+    
+    <ng-template #noimg>
+        <!-- add some style to this later -->
+        <p>Image Not Available</p>
+    </ng-template>
+</div>
