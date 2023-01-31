@@ -1,22 +1,7 @@
-<div class="container">
-    <div class="row">
-        <div class="container">
-          <div class="row">
-              <app-news-card class="post col-xl-4" *ngFor="let news of newslist" [news]="news"></app-news-card>
-          </div>
-        </div>
-        <div class="w-100"><app-paging [page]="page" (newPage)="getPage($event)"></app-paging></div>
-      <!-- </main> -->
-      <!-- <aside class="col-lg-4"> -->
-        <!-- Widget [Search Bar Widget]-->
-        <!-- <app-widget-search></app-widget-search> -->
-        <!-- Widget [Latest Posts Widget] -->
-        <!-- <app-latest-posts></app-latest-posts> -->
-        <!-- Widget [Categories Widget]--> 
-        <!-- <app-categories></app-categories> -->
-        <!-- Widget [Tags Cloud Widget]-->
-        <!-- <app-tags></app-tags> -->
-      <!-- </aside> -->
-    </div>
+<div class="row">
+        <span *ngIf="newslist.length == 0" class="loader"></span>
+        <app-news-card class="post col-xl-3" *ngFor="let news of newslist" [news]="news"></app-news-card>
+    <div class="w-100"><app-paging [page]="page" (newPage)="getPage($event)"></app-paging></div>
 </div>
+
   
