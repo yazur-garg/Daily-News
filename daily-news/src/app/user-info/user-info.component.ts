@@ -32,5 +32,11 @@ export class UserInfoComponent implements OnInit {
         this.inputUser.prefs.categs.push(category);
       }
     }
+    this.databaseService
+      .updateUser(this.inputUser.id, this.inputUser)
+      .subscribe((err) => {
+        console.log(err);
+        this.flagMessage = true;
+      });
   }
 }
