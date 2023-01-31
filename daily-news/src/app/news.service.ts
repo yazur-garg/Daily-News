@@ -22,9 +22,8 @@ export class NewsService {
                      console.log('Handling error locally and rethrowing it...',err);
                      return throwError(err)}));
   }
-// current work
+  
   getNewsTopic(topic : String): Observable<any> {
-    console.log("!! topic = ", topic);
     return this.http.get<any>(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${topic}&api-key=R2UmguMeKyLd7e0h48xvNaEn6f1k74n6`)
                   .pipe(catchError(err => {
                      console.log('Handling error locally and rethrowing it...',err);
