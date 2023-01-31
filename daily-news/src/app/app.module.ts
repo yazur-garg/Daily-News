@@ -17,6 +17,7 @@ import { UserProfileComponent } from './user-profile/user-profile.component';
 import { UserInfoComponent } from './user-info/user-info.component';
 import { UserSidebarComponent } from './user-sidebar/user-sidebar.component';
 import { SearchComponent } from './search/search.component';
+import { SearchbarComponent } from './searchbar/searchbar.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { SearchComponent } from './search/search.component';
     UserProfileComponent,
     UserInfoComponent,
     UserSidebarComponent,
-    SearchComponent
+    SearchComponent,
+    SearchbarComponent
   ],
   imports: [
     BrowserModule,
