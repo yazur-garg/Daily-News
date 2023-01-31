@@ -23,8 +23,8 @@ export class NewsService {
                      return throwError(err)}));
   }
   
-  getNewsTopic(topic : String): Observable<any> {
-    return this.http.get<any>(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${topic}&api-key=R2UmguMeKyLd7e0h48xvNaEn6f1k74n6`)
+  getNewsTopic(topic : String, page : Number = 0): Observable<any> {
+    return this.http.get<any>(`https://api.nytimes.com/svc/search/v2/articlesearch.json?q=${topic}&page=${page}&api-key=R2UmguMeKyLd7e0h48xvNaEn6f1k74n6`)
                   .pipe(catchError(err => {
                      console.log('Handling error locally and rethrowing it...',err);
                      return throwError(err)}));
