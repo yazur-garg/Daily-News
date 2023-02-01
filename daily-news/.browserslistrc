@@ -13,4 +13,8 @@ last 1 Firefox version
 last 2 Edge major versions
 last 2 Safari major versions
 last 2 iOS major versions
-Firefox ESR
+Chrome >= 61
+Firefox >=99
+Edge >=79
+Safari >=13
+iOS >=13

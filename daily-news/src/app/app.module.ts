@@ -19,6 +19,7 @@ import { UserSidebarComponent } from './user-sidebar/user-sidebar.component';
 import { SearchComponent } from './search/search.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { SearchNewsCardComponent } from './search-news-card/search-news-card.component';
+import { LogoutComponent } from './logout/logout.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { SearchNewsCardComponent } from './search-news-card/search-news-card.com
     UserSidebarComponent,
     SearchComponent,
     SearchbarComponent,
-    SearchNewsCardComponent
+    SearchNewsCardComponent,
+    LogoutComponent
   ],
   imports: [
     BrowserModule,
