@@ -9,8 +9,8 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(lat : Number, lon : Number, limit : Number = 1): Observable<any> {
-    return this.http.get<any>(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=${limit}&appid={API key}`)
+  getWeather(lat : Number, lon : Number): Observable<any> {
+    return this.http.get<any>(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=12fe6cf7af16324df4b85dac428877cd`)
                   .pipe(catchError(err => {
                      console.log('Handling error locally and rethrowing it...',err);
                      return throwError(err)}));
