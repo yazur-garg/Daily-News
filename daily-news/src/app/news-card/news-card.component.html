@@ -1,4 +1,4 @@
-<div class="border rounded overflow-hidden mb-3 shadow" style="height: 575px;">
+<div class="border rounded overflow-hidden mb-3 shadow" *ngIf="inputnews.title != '' && inputnews.abstract != ''" style="height: 575px;">
     <div class="p-3">
         <h3 style="min-height: 140px;">{{inputnews.title}}</h3>
         <div class="mb-1 text-muted">{{inputnews.published_date | date:'mediumDate'}}
