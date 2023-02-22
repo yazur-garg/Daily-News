@@ -15,9 +15,15 @@ export class HeaderComponent implements OnInit {
   position: any = {
     lat: 43.7001,
     lng: -79.4163
-  }
+  };
+  weather: any = {
+    name: "",
+    temp_min: 0,
+    temp_max: 0,
+    icon: ""
+  };
 
-  constructor(public auth: AuthService, private http: HttpClient) { }
+  constructor(public auth: AuthService, private weatherService: WeatherService, private http: HttpClient) { }
 
   ngOnInit(): void {
     Geolocation.getCurrentPosition().then((position) => {
@@ -34,6 +40,15 @@ export class HeaderComponent implements OnInit {
     this.auth.user$.subscribe(
       (profile) => (this.profileJson = JSON.stringify(profile, null, 2)),
     );
+
+    this.weatherService.getWeather(this.position.lat, this.position.lng).subscribe(
+      data => {
+        this.weather.name = data.name;
+        this.weather.temp_min = data.main.temp_min;
+        this.weather.temp_max = data.main.temp_max;
+        this.weather.icon = data.weather[0].icon;
+      }
+    , err => {console.log('Error: ' + err)});
   }
   
   formSubmit() {
