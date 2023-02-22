@@ -21,6 +21,7 @@ import { SearchbarComponent } from './searchbar/searchbar.component';
 import { SearchNewsCardComponent } from './search-news-card/search-news-card.component';
 import { LogoutComponent } from './logout/logout.component';
 
+import { DarkModeService } from 'angular-dark-mode';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,7 @@ import { LogoutComponent } from './logout/logout.component';
     SearchComponent,
     SearchbarComponent,
     SearchNewsCardComponent,
-    LogoutComponent
+    LogoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,10 +47,10 @@ import { LogoutComponent } from './logout/logout.component';
     FormsModule,
     AuthModule.forRoot({
       domain: 'dev-qlaqth2maxgklzeb.us.auth0.com',
-      clientId: 'LA10lce6tjmCYhAOgl5efiIPnmKOe4GZ'
-    })
+      clientId: 'LA10lce6tjmCYhAOgl5efiIPnmKOe4GZ',
+    }),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [DarkModeService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
