@@ -3,6 +3,7 @@ import { AuthService } from '@auth0/auth0-angular';
 import { Geolocation } from '@capacitor/geolocation';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
+import { WeatherService } from '../weather.service';
 
 @Component({
   selector: 'app-header',
@@ -29,10 +30,7 @@ export class HeaderComponent implements OnInit {
     Geolocation.getCurrentPosition().then((position) => {
       this.position.lat = position.coords.latitude;
       this.position.lng = position.coords.longitude;
-      console.log('Latitude: ' + position.coords.latitude);
-      console.log('Longitude: ' + position.coords.longitude);
-      console.log(this.position);
-      
+      this.getWeather();
     }).catch((error) => {
       console.log('Error getting location', error);
     });
@@ -41,6 +39,10 @@ export class HeaderComponent implements OnInit {
       (profile) => (this.profileJson = JSON.stringify(profile, null, 2)),
     );
 
+    this.getWeather();
+  }
+  
+  getWeather() {
     this.weatherService.getWeather(this.position.lat, this.position.lng).subscribe(
       data => {
         this.weather.name = data.name;
@@ -50,7 +52,7 @@ export class HeaderComponent implements OnInit {
       }
     , err => {console.log('Error: ' + err)});
   }
-  
+
   formSubmit() {
     console.log('form submitted');
   }
