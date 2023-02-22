@@ -4,7 +4,6 @@ import { DarkModeService } from 'angular-dark-mode';
 import { Observable } from 'rxjs';
 import { Geolocation } from '@capacitor/geolocation';
 import { HttpClient } from '@angular/common/http';
-import { catchError, Observable, throwError } from 'rxjs';
 import { WeatherService } from '../weather.service';
 
 @Component({
