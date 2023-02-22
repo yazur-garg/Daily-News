@@ -14,3 +14,55 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: "Playfair Display", Georgia, "Times New Roman", serif/*rtl:Amiri, Georgia, "Times New Roman", serif*/;
   }
+
+  ::ng-deep body.dark-mode {
+  background-color: black !important;
+  color: #fff !important;
+
+}
+
+::ng-deep body.light-mode {
+background-color: #fff !important;
+  color: #333 !important;
+
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle-label {
+  position: relative;
+  display: inline-block;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.sun,
+.moon {
+  padding: 8px;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transition: top 0.3s;
+  user-select: none;
+}
+
+.sun {
+  top: 0;
+}
+
+.moon {
+  top: -150%;
+}
+
+.toggle:checked + .toggle-label .sun {
+  top: 150%;
+}
+
+.toggle:checked + .toggle-label .moon {
+  top: 0;
+}

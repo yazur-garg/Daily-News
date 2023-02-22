@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '@auth0/auth0-angular';
+import { DarkModeService } from 'angular-dark-mode';
+import { Observable } from 'rxjs';
 import { Geolocation } from '@capacitor/geolocation';
 import { HttpClient } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
@@ -24,7 +26,8 @@ export class HeaderComponent implements OnInit {
     icon: ""
   };
 
-  constructor(public auth: AuthService, private weatherService: WeatherService, private http: HttpClient) { }
+  darkMode$: Observable<boolean> = this.darkModeService.darkMode$;
+  constructor(public auth: AuthService, private weatherService: WeatherService, private http: HttpClient, private darkModeService: DarkModeService) { }
 
   ngOnInit(): void {
     Geolocation.getCurrentPosition().then((position) => {
@@ -34,7 +37,9 @@ export class HeaderComponent implements OnInit {
     }).catch((error) => {
       console.log('Error getting location', error);
     });
-
+    this.darkMode$.subscribe((value) => {
+      console.log('dark mode value:', value);
+    });
     this.auth.user$.subscribe(
       (profile) => (this.profileJson = JSON.stringify(profile, null, 2)),
     );
@@ -51,6 +56,10 @@ export class HeaderComponent implements OnInit {
         this.weather.icon = data.weather[0].icon;
       }
     , err => {console.log('Error: ' + err)});
+  }
+  onToggle(): void {
+    console.log('toggle');
+    this.darkModeService.toggle();
   }
 
   formSubmit() {
